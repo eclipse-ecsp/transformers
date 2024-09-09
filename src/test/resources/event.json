@@ -1,0 +1,1316 @@
+{
+  "EventID": "IgniteExceptionEvent",
+  "Version": "1.1",
+  "Timestamp": 1481724868055,
+  "Data": {
+    "errorTimeInMilis": 1560941686019,
+    "igniteEvent": {
+      "EventID": "GigyaWebHook",
+      "Version": "1.0",
+      "Timestamp": 1481724868055,
+      "Data": {
+        "id": "ae87f362-9f5e-4cb1-a48f-e8f148e2fajd",
+        "uid": "7cfc36955b794138aaed0e82515c67dj",
+        "eventType": "accountCreated"
+      },
+      "Timezone": 330,
+      "BenchMode": "1",
+      "DeviceDeliveryCutoff": -1
+    },
+    "exception": {
+      "stackTrace": [
+        {
+          "methodName": "getGigyaClient",
+          "fileName": "GigyaClientErrorConfig.java",
+          "lineNumber": 21,
+          "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "CGLIB$getGigyaClient$0",
+          "fileName": "<generated>",
+          "lineNumber": -1,
+          "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig$$EnhancerBySpringCGLIB$$37f1f7ea",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "invoke",
+          "fileName": "<generated>",
+          "lineNumber": -1,
+          "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig$$EnhancerBySpringCGLIB$$37f1f7ea$$FastClassBySpringCGLIB$$18aaa223",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "invokeSuper",
+          "fileName": "MethodProxy.java",
+          "lineNumber": 244,
+          "className": "org.springframework.cglib.proxy.MethodProxy",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "intercept",
+          "fileName": "ConfigurationClassEnhancer.java",
+          "lineNumber": 363,
+          "className": "org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "getGigyaClient",
+          "fileName": "<generated>",
+          "lineNumber": -1,
+          "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig$$EnhancerBySpringCGLIB$$37f1f7ea",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "invoke0",
+          "fileName": "NativeMethodAccessorImpl.java",
+          "lineNumber": -2,
+          "className": "sun.reflect.NativeMethodAccessorImpl",
+          "nativeMethod": true
+        },
+        {
+          "methodName": "invoke",
+          "fileName": "NativeMethodAccessorImpl.java",
+          "lineNumber": 62,
+          "className": "sun.reflect.NativeMethodAccessorImpl",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "invoke",
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "lineNumber": 43,
+          "className": "sun.reflect.DelegatingMethodAccessorImpl",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "invoke",
+          "fileName": "Method.java",
+          "lineNumber": 498,
+          "className": "java.lang.reflect.Method",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "instantiate",
+          "fileName": "SimpleInstantiationStrategy.java",
+          "lineNumber": 154,
+          "className": "org.springframework.beans.factory.support.SimpleInstantiationStrategy",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "instantiate",
+          "fileName": "ConstructorResolver.java",
+          "lineNumber": 622,
+          "className": "org.springframework.beans.factory.support.ConstructorResolver",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "instantiateUsingFactoryMethod",
+          "fileName": "ConstructorResolver.java",
+          "lineNumber": 456,
+          "className": "org.springframework.beans.factory.support.ConstructorResolver",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "instantiateUsingFactoryMethod",
+          "fileName": "AbstractAutowireCapableBeanFactory.java",
+          "lineNumber": 1321,
+          "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "createBeanInstance",
+          "fileName": "AbstractAutowireCapableBeanFactory.java",
+          "lineNumber": 1160,
+          "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "doCreateBean",
+          "fileName": "AbstractAutowireCapableBeanFactory.java",
+          "lineNumber": 555,
+          "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "createBean",
+          "fileName": "AbstractAutowireCapableBeanFactory.java",
+          "lineNumber": 515,
+          "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "lambda$doGetBean$0",
+          "fileName": "AbstractBeanFactory.java",
+          "lineNumber": 320,
+          "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "getSingleton",
+          "fileName": "DefaultSingletonBeanRegistry.java",
+          "lineNumber": 222,
+          "className": "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "doGetBean",
+          "fileName": "AbstractBeanFactory.java",
+          "lineNumber": 318,
+          "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "getBean",
+          "fileName": "AbstractBeanFactory.java",
+          "lineNumber": 199,
+          "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "resolveCandidate",
+          "fileName": "DependencyDescriptor.java",
+          "lineNumber": 277,
+          "className": "org.springframework.beans.factory.config.DependencyDescriptor",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "doResolveDependency",
+          "fileName": "DefaultListableBeanFactory.java",
+          "lineNumber": 1248,
+          "className": "org.springframework.beans.factory.support.DefaultListableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "resolveDependency",
+          "fileName": "DefaultListableBeanFactory.java",
+          "lineNumber": 1168,
+          "className": "org.springframework.beans.factory.support.DefaultListableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "inject",
+          "fileName": "AutowiredAnnotationBeanPostProcessor.java",
+          "lineNumber": 593,
+          "className": "org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "inject",
+          "fileName": "InjectionMetadata.java",
+          "lineNumber": 90,
+          "className": "org.springframework.beans.factory.annotation.InjectionMetadata",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "postProcessProperties",
+          "fileName": "AutowiredAnnotationBeanPostProcessor.java",
+          "lineNumber": 374,
+          "className": "org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "populateBean",
+          "fileName": "AbstractAutowireCapableBeanFactory.java",
+          "lineNumber": 1411,
+          "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "doCreateBean",
+          "fileName": "AbstractAutowireCapableBeanFactory.java",
+          "lineNumber": 592,
+          "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "createBean",
+          "fileName": "AbstractAutowireCapableBeanFactory.java",
+          "lineNumber": 515,
+          "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "lambda$doGetBean$0",
+          "fileName": "AbstractBeanFactory.java",
+          "lineNumber": 320,
+          "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "getSingleton",
+          "fileName": "DefaultSingletonBeanRegistry.java",
+          "lineNumber": 222,
+          "className": "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "doGetBean",
+          "fileName": "AbstractBeanFactory.java",
+          "lineNumber": 318,
+          "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "getBean",
+          "fileName": "AbstractBeanFactory.java",
+          "lineNumber": 199,
+          "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "preInstantiateSingletons",
+          "fileName": "DefaultListableBeanFactory.java",
+          "lineNumber": 843,
+          "className": "org.springframework.beans.factory.support.DefaultListableBeanFactory",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "finishBeanFactoryInitialization",
+          "fileName": "AbstractApplicationContext.java",
+          "lineNumber": 877,
+          "className": "org.springframework.context.support.AbstractApplicationContext",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "refresh",
+          "fileName": "AbstractApplicationContext.java",
+          "lineNumber": 549,
+          "className": "org.springframework.context.support.AbstractApplicationContext",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "loadContext",
+          "fileName": "AbstractGenericContextLoader.java",
+          "lineNumber": 128,
+          "className": "org.springframework.test.context.support.AbstractGenericContextLoader",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "loadContext",
+          "fileName": "AbstractGenericContextLoader.java",
+          "lineNumber": 60,
+          "className": "org.springframework.test.context.support.AbstractGenericContextLoader",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "delegateLoading",
+          "fileName": "AbstractDelegatingSmartContextLoader.java",
+          "lineNumber": 275,
+          "className": "org.springframework.test.context.support.AbstractDelegatingSmartContextLoader",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "loadContext",
+          "fileName": "AbstractDelegatingSmartContextLoader.java",
+          "lineNumber": 243,
+          "className": "org.springframework.test.context.support.AbstractDelegatingSmartContextLoader",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "loadContextInternal",
+          "fileName": "DefaultCacheAwareContextLoaderDelegate.java",
+          "lineNumber": 99,
+          "className": "org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "loadContext",
+          "fileName": "DefaultCacheAwareContextLoaderDelegate.java",
+          "lineNumber": 117,
+          "className": "org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "getApplicationContext",
+          "fileName": "DefaultTestContext.java",
+          "lineNumber": 108,
+          "className": "org.springframework.test.context.support.DefaultTestContext",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "injectDependencies",
+          "fileName": "DependencyInjectionTestExecutionListener.java",
+          "lineNumber": 117,
+          "className": "org.springframework.test.context.support.DependencyInjectionTestExecutionListener",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "prepareTestInstance",
+          "fileName": "DependencyInjectionTestExecutionListener.java",
+          "lineNumber": 83,
+          "className": "org.springframework.test.context.support.DependencyInjectionTestExecutionListener",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "prepareTestInstance",
+          "fileName": "TestContextManager.java",
+          "lineNumber": 246,
+          "className": "org.springframework.test.context.TestContextManager",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "createTest",
+          "fileName": "SpringJUnit4ClassRunner.java",
+          "lineNumber": 227,
+          "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "runReflectiveCall",
+          "fileName": "SpringJUnit4ClassRunner.java",
+          "lineNumber": 289,
+          "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "ReflectiveCallable.java",
+          "lineNumber": 12,
+          "className": "org.junit.internal.runners.model.ReflectiveCallable",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "methodBlock",
+          "fileName": "SpringJUnit4ClassRunner.java",
+          "lineNumber": 291,
+          "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "runChild",
+          "fileName": "SpringJUnit4ClassRunner.java",
+          "lineNumber": 246,
+          "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "runChild",
+          "fileName": "SpringJUnit4ClassRunner.java",
+          "lineNumber": 97,
+          "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "ParentRunner.java",
+          "lineNumber": 290,
+          "className": "org.junit.runners.ParentRunner$3",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "schedule",
+          "fileName": "ParentRunner.java",
+          "lineNumber": 71,
+          "className": "org.junit.runners.ParentRunner$1",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "runChildren",
+          "fileName": "ParentRunner.java",
+          "lineNumber": 288,
+          "className": "org.junit.runners.ParentRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "access$000",
+          "fileName": "ParentRunner.java",
+          "lineNumber": 58,
+          "className": "org.junit.runners.ParentRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "ParentRunner.java",
+          "lineNumber": 268,
+          "className": "org.junit.runners.ParentRunner$2",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "RunBeforeTestClassCallbacks.java",
+          "lineNumber": 61,
+          "className": "org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "RunAfterTestClassCallbacks.java",
+          "lineNumber": 70,
+          "className": "org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "ExternalResource.java",
+          "lineNumber": 48,
+          "className": "org.junit.rules.ExternalResource$1",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "ExternalResource.java",
+          "lineNumber": 48,
+          "className": "org.junit.rules.ExternalResource$1",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "ExternalResource.java",
+          "lineNumber": 48,
+          "className": "org.junit.rules.ExternalResource$1",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "ExternalResource.java",
+          "lineNumber": 48,
+          "className": "org.junit.rules.ExternalResource$1",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "RunRules.java",
+          "lineNumber": 20,
+          "className": "org.junit.rules.RunRules",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "ParentRunner.java",
+          "lineNumber": 363,
+          "className": "org.junit.runners.ParentRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "SpringJUnit4ClassRunner.java",
+          "lineNumber": 190,
+          "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "JUnitCore.java",
+          "lineNumber": 137,
+          "className": "org.junit.runner.JUnitCore",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "JUnitCore.java",
+          "lineNumber": 115,
+          "className": "org.junit.runner.JUnitCore",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "execute",
+          "fileName": "RunnerExecutor.java",
+          "lineNumber": 39,
+          "className": "org.junit.vintage.engine.execution.RunnerExecutor",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "accept",
+          "fileName": "ForEachOps.java",
+          "lineNumber": 184,
+          "className": "java.util.stream.ForEachOps$ForEachOp$OfRef",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "accept",
+          "fileName": "ReferencePipeline.java",
+          "lineNumber": 193,
+          "className": "java.util.stream.ReferencePipeline$3$1",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "forEachRemaining",
+          "fileName": "Iterator.java",
+          "lineNumber": 116,
+          "className": "java.util.Iterator",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "forEachRemaining",
+          "fileName": "Spliterators.java",
+          "lineNumber": 1801,
+          "className": "java.util.Spliterators$IteratorSpliterator",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "copyInto",
+          "fileName": "AbstractPipeline.java",
+          "lineNumber": 481,
+          "className": "java.util.stream.AbstractPipeline",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "wrapAndCopyInto",
+          "fileName": "AbstractPipeline.java",
+          "lineNumber": 471,
+          "className": "java.util.stream.AbstractPipeline",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluateSequential",
+          "fileName": "ForEachOps.java",
+          "lineNumber": 151,
+          "className": "java.util.stream.ForEachOps$ForEachOp",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluateSequential",
+          "fileName": "ForEachOps.java",
+          "lineNumber": 174,
+          "className": "java.util.stream.ForEachOps$ForEachOp$OfRef",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "evaluate",
+          "fileName": "AbstractPipeline.java",
+          "lineNumber": 234,
+          "className": "java.util.stream.AbstractPipeline",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "forEach",
+          "fileName": "ReferencePipeline.java",
+          "lineNumber": 418,
+          "className": "java.util.stream.ReferencePipeline",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "executeAllChildren",
+          "fileName": "VintageTestEngine.java",
+          "lineNumber": 79,
+          "className": "org.junit.vintage.engine.VintageTestEngine",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "execute",
+          "fileName": "VintageTestEngine.java",
+          "lineNumber": 70,
+          "className": "org.junit.vintage.engine.VintageTestEngine",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "execute",
+          "fileName": "DefaultLauncher.java",
+          "lineNumber": 170,
+          "className": "org.junit.platform.launcher.core.DefaultLauncher",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "execute",
+          "fileName": "DefaultLauncher.java",
+          "lineNumber": 154,
+          "className": "org.junit.platform.launcher.core.DefaultLauncher",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "execute",
+          "fileName": "DefaultLauncher.java",
+          "lineNumber": 90,
+          "className": "org.junit.platform.launcher.core.DefaultLauncher",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "JUnit5TestReference.java",
+          "lineNumber": 89,
+          "className": "org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "TestExecution.java",
+          "lineNumber": 41,
+          "className": "org.eclipse.jdt.internal.junit.runner.TestExecution",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "runTests",
+          "fileName": "RemoteTestRunner.java",
+          "lineNumber": 541,
+          "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "runTests",
+          "fileName": "RemoteTestRunner.java",
+          "lineNumber": 763,
+          "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "run",
+          "fileName": "RemoteTestRunner.java",
+          "lineNumber": 463,
+          "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+          "nativeMethod": false
+        },
+        {
+          "methodName": "main",
+          "fileName": "RemoteTestRunner.java",
+          "lineNumber": 209,
+          "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+          "nativeMethod": false
+        }
+      ],
+      "message": "Couldn't fetch the requested account information from gigya server.",
+      "localizedMessage": "Couldn't fetch the requested account information from gigya server."
+    },
+    "processorName": "VehicleInfoNotication",
+    "retryCount": 2,
+    "nestedDLQExceptionData": {
+      "igniteEventBlob": "eyJFdmVudElEIjoiR2lneWFXZWJIb29rIiwiVmVyc2lvbiI6IjEuMCIsIlRpbWVzdGFtcCI6MTQ4MTcyNDg2ODA1NSwiRGF0YSI6eyJpZCI6ImFlODdmMzYyLTlmNWUtNGNiMS1hNDhmLWU4ZjE0OGUyZmFqZCIsInVpZCI6IjdjZmMzNjk1NWI3OTQxMzhhYWVkMGU4MjUxNWM2N2RqIiwiZXZlbnRUeXBlIjoiYWNjb3VudENyZWF0ZWQifSwiVGltZXpvbmUiOjMzMCwiQmVuY2hNb2RlIjoiMSIsIkRldmljZURlbGl2ZXJ5Q3V0b2ZmIjotMX0=",
+      "iteration": 1,
+      "processorName": "VehicleInfoNotication",
+      "exception": {
+        "stackTrace": [
+          {
+            "methodName": "getGigyaClient",
+            "fileName": "GigyaClientErrorConfig.java",
+            "lineNumber": 21,
+            "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "CGLIB$getGigyaClient$0",
+            "fileName": "<generated>",
+            "lineNumber": -1,
+            "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig$$EnhancerBySpringCGLIB$$37f1f7ea",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "invoke",
+            "fileName": "<generated>",
+            "lineNumber": -1,
+            "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig$$EnhancerBySpringCGLIB$$37f1f7ea$$FastClassBySpringCGLIB$$18aaa223",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "invokeSuper",
+            "fileName": "MethodProxy.java",
+            "lineNumber": 244,
+            "className": "org.springframework.cglib.proxy.MethodProxy",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "intercept",
+            "fileName": "ConfigurationClassEnhancer.java",
+            "lineNumber": 363,
+            "className": "org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "getGigyaClient",
+            "fileName": "<generated>",
+            "lineNumber": -1,
+            "className": "com.harman.ignite.notification.gigya.GigyaClientErrorConfig$$EnhancerBySpringCGLIB$$37f1f7ea",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "invoke0",
+            "fileName": "NativeMethodAccessorImpl.java",
+            "lineNumber": -2,
+            "className": "sun.reflect.NativeMethodAccessorImpl",
+            "nativeMethod": true
+          },
+          {
+            "methodName": "invoke",
+            "fileName": "NativeMethodAccessorImpl.java",
+            "lineNumber": 62,
+            "className": "sun.reflect.NativeMethodAccessorImpl",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "invoke",
+            "fileName": "DelegatingMethodAccessorImpl.java",
+            "lineNumber": 43,
+            "className": "sun.reflect.DelegatingMethodAccessorImpl",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "invoke",
+            "fileName": "Method.java",
+            "lineNumber": 498,
+            "className": "java.lang.reflect.Method",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "instantiate",
+            "fileName": "SimpleInstantiationStrategy.java",
+            "lineNumber": 154,
+            "className": "org.springframework.beans.factory.support.SimpleInstantiationStrategy",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "instantiate",
+            "fileName": "ConstructorResolver.java",
+            "lineNumber": 622,
+            "className": "org.springframework.beans.factory.support.ConstructorResolver",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "instantiateUsingFactoryMethod",
+            "fileName": "ConstructorResolver.java",
+            "lineNumber": 456,
+            "className": "org.springframework.beans.factory.support.ConstructorResolver",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "instantiateUsingFactoryMethod",
+            "fileName": "AbstractAutowireCapableBeanFactory.java",
+            "lineNumber": 1321,
+            "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "createBeanInstance",
+            "fileName": "AbstractAutowireCapableBeanFactory.java",
+            "lineNumber": 1160,
+            "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "doCreateBean",
+            "fileName": "AbstractAutowireCapableBeanFactory.java",
+            "lineNumber": 555,
+            "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "createBean",
+            "fileName": "AbstractAutowireCapableBeanFactory.java",
+            "lineNumber": 515,
+            "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "lambda$doGetBean$0",
+            "fileName": "AbstractBeanFactory.java",
+            "lineNumber": 320,
+            "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "getSingleton",
+            "fileName": "DefaultSingletonBeanRegistry.java",
+            "lineNumber": 222,
+            "className": "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "doGetBean",
+            "fileName": "AbstractBeanFactory.java",
+            "lineNumber": 318,
+            "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "getBean",
+            "fileName": "AbstractBeanFactory.java",
+            "lineNumber": 199,
+            "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "resolveCandidate",
+            "fileName": "DependencyDescriptor.java",
+            "lineNumber": 277,
+            "className": "org.springframework.beans.factory.config.DependencyDescriptor",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "doResolveDependency",
+            "fileName": "DefaultListableBeanFactory.java",
+            "lineNumber": 1248,
+            "className": "org.springframework.beans.factory.support.DefaultListableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "resolveDependency",
+            "fileName": "DefaultListableBeanFactory.java",
+            "lineNumber": 1168,
+            "className": "org.springframework.beans.factory.support.DefaultListableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "inject",
+            "fileName": "AutowiredAnnotationBeanPostProcessor.java",
+            "lineNumber": 593,
+            "className": "org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "inject",
+            "fileName": "InjectionMetadata.java",
+            "lineNumber": 90,
+            "className": "org.springframework.beans.factory.annotation.InjectionMetadata",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "postProcessProperties",
+            "fileName": "AutowiredAnnotationBeanPostProcessor.java",
+            "lineNumber": 374,
+            "className": "org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "populateBean",
+            "fileName": "AbstractAutowireCapableBeanFactory.java",
+            "lineNumber": 1411,
+            "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "doCreateBean",
+            "fileName": "AbstractAutowireCapableBeanFactory.java",
+            "lineNumber": 592,
+            "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "createBean",
+            "fileName": "AbstractAutowireCapableBeanFactory.java",
+            "lineNumber": 515,
+            "className": "org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "lambda$doGetBean$0",
+            "fileName": "AbstractBeanFactory.java",
+            "lineNumber": 320,
+            "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "getSingleton",
+            "fileName": "DefaultSingletonBeanRegistry.java",
+            "lineNumber": 222,
+            "className": "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "doGetBean",
+            "fileName": "AbstractBeanFactory.java",
+            "lineNumber": 318,
+            "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "getBean",
+            "fileName": "AbstractBeanFactory.java",
+            "lineNumber": 199,
+            "className": "org.springframework.beans.factory.support.AbstractBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "preInstantiateSingletons",
+            "fileName": "DefaultListableBeanFactory.java",
+            "lineNumber": 843,
+            "className": "org.springframework.beans.factory.support.DefaultListableBeanFactory",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "finishBeanFactoryInitialization",
+            "fileName": "AbstractApplicationContext.java",
+            "lineNumber": 877,
+            "className": "org.springframework.context.support.AbstractApplicationContext",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "refresh",
+            "fileName": "AbstractApplicationContext.java",
+            "lineNumber": 549,
+            "className": "org.springframework.context.support.AbstractApplicationContext",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "loadContext",
+            "fileName": "AbstractGenericContextLoader.java",
+            "lineNumber": 128,
+            "className": "org.springframework.test.context.support.AbstractGenericContextLoader",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "loadContext",
+            "fileName": "AbstractGenericContextLoader.java",
+            "lineNumber": 60,
+            "className": "org.springframework.test.context.support.AbstractGenericContextLoader",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "delegateLoading",
+            "fileName": "AbstractDelegatingSmartContextLoader.java",
+            "lineNumber": 275,
+            "className": "org.springframework.test.context.support.AbstractDelegatingSmartContextLoader",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "loadContext",
+            "fileName": "AbstractDelegatingSmartContextLoader.java",
+            "lineNumber": 243,
+            "className": "org.springframework.test.context.support.AbstractDelegatingSmartContextLoader",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "loadContextInternal",
+            "fileName": "DefaultCacheAwareContextLoaderDelegate.java",
+            "lineNumber": 99,
+            "className": "org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "loadContext",
+            "fileName": "DefaultCacheAwareContextLoaderDelegate.java",
+            "lineNumber": 117,
+            "className": "org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "getApplicationContext",
+            "fileName": "DefaultTestContext.java",
+            "lineNumber": 108,
+            "className": "org.springframework.test.context.support.DefaultTestContext",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "injectDependencies",
+            "fileName": "DependencyInjectionTestExecutionListener.java",
+            "lineNumber": 117,
+            "className": "org.springframework.test.context.support.DependencyInjectionTestExecutionListener",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "prepareTestInstance",
+            "fileName": "DependencyInjectionTestExecutionListener.java",
+            "lineNumber": 83,
+            "className": "org.springframework.test.context.support.DependencyInjectionTestExecutionListener",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "prepareTestInstance",
+            "fileName": "TestContextManager.java",
+            "lineNumber": 246,
+            "className": "org.springframework.test.context.TestContextManager",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "createTest",
+            "fileName": "SpringJUnit4ClassRunner.java",
+            "lineNumber": 227,
+            "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "runReflectiveCall",
+            "fileName": "SpringJUnit4ClassRunner.java",
+            "lineNumber": 289,
+            "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "ReflectiveCallable.java",
+            "lineNumber": 12,
+            "className": "org.junit.internal.runners.model.ReflectiveCallable",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "methodBlock",
+            "fileName": "SpringJUnit4ClassRunner.java",
+            "lineNumber": 291,
+            "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "runChild",
+            "fileName": "SpringJUnit4ClassRunner.java",
+            "lineNumber": 246,
+            "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "runChild",
+            "fileName": "SpringJUnit4ClassRunner.java",
+            "lineNumber": 97,
+            "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "ParentRunner.java",
+            "lineNumber": 290,
+            "className": "org.junit.runners.ParentRunner$3",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "schedule",
+            "fileName": "ParentRunner.java",
+            "lineNumber": 71,
+            "className": "org.junit.runners.ParentRunner$1",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "runChildren",
+            "fileName": "ParentRunner.java",
+            "lineNumber": 288,
+            "className": "org.junit.runners.ParentRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "access$000",
+            "fileName": "ParentRunner.java",
+            "lineNumber": 58,
+            "className": "org.junit.runners.ParentRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "ParentRunner.java",
+            "lineNumber": 268,
+            "className": "org.junit.runners.ParentRunner$2",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "RunBeforeTestClassCallbacks.java",
+            "lineNumber": 61,
+            "className": "org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "RunAfterTestClassCallbacks.java",
+            "lineNumber": 70,
+            "className": "org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "ExternalResource.java",
+            "lineNumber": 48,
+            "className": "org.junit.rules.ExternalResource$1",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "ExternalResource.java",
+            "lineNumber": 48,
+            "className": "org.junit.rules.ExternalResource$1",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "ExternalResource.java",
+            "lineNumber": 48,
+            "className": "org.junit.rules.ExternalResource$1",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "ExternalResource.java",
+            "lineNumber": 48,
+            "className": "org.junit.rules.ExternalResource$1",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "RunRules.java",
+            "lineNumber": 20,
+            "className": "org.junit.rules.RunRules",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "ParentRunner.java",
+            "lineNumber": 363,
+            "className": "org.junit.runners.ParentRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "SpringJUnit4ClassRunner.java",
+            "lineNumber": 190,
+            "className": "org.springframework.test.context.junit4.SpringJUnit4ClassRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "JUnitCore.java",
+            "lineNumber": 137,
+            "className": "org.junit.runner.JUnitCore",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "JUnitCore.java",
+            "lineNumber": 115,
+            "className": "org.junit.runner.JUnitCore",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "execute",
+            "fileName": "RunnerExecutor.java",
+            "lineNumber": 39,
+            "className": "org.junit.vintage.engine.execution.RunnerExecutor",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "accept",
+            "fileName": "ForEachOps.java",
+            "lineNumber": 184,
+            "className": "java.util.stream.ForEachOps$ForEachOp$OfRef",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "accept",
+            "fileName": "ReferencePipeline.java",
+            "lineNumber": 193,
+            "className": "java.util.stream.ReferencePipeline$3$1",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "forEachRemaining",
+            "fileName": "Iterator.java",
+            "lineNumber": 116,
+            "className": "java.util.Iterator",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "forEachRemaining",
+            "fileName": "Spliterators.java",
+            "lineNumber": 1801,
+            "className": "java.util.Spliterators$IteratorSpliterator",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "copyInto",
+            "fileName": "AbstractPipeline.java",
+            "lineNumber": 481,
+            "className": "java.util.stream.AbstractPipeline",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "wrapAndCopyInto",
+            "fileName": "AbstractPipeline.java",
+            "lineNumber": 471,
+            "className": "java.util.stream.AbstractPipeline",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluateSequential",
+            "fileName": "ForEachOps.java",
+            "lineNumber": 151,
+            "className": "java.util.stream.ForEachOps$ForEachOp",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluateSequential",
+            "fileName": "ForEachOps.java",
+            "lineNumber": 174,
+            "className": "java.util.stream.ForEachOps$ForEachOp$OfRef",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "evaluate",
+            "fileName": "AbstractPipeline.java",
+            "lineNumber": 234,
+            "className": "java.util.stream.AbstractPipeline",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "forEach",
+            "fileName": "ReferencePipeline.java",
+            "lineNumber": 418,
+            "className": "java.util.stream.ReferencePipeline",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "executeAllChildren",
+            "fileName": "VintageTestEngine.java",
+            "lineNumber": 79,
+            "className": "org.junit.vintage.engine.VintageTestEngine",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "execute",
+            "fileName": "VintageTestEngine.java",
+            "lineNumber": 70,
+            "className": "org.junit.vintage.engine.VintageTestEngine",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "execute",
+            "fileName": "DefaultLauncher.java",
+            "lineNumber": 170,
+            "className": "org.junit.platform.launcher.core.DefaultLauncher",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "execute",
+            "fileName": "DefaultLauncher.java",
+            "lineNumber": 154,
+            "className": "org.junit.platform.launcher.core.DefaultLauncher",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "execute",
+            "fileName": "DefaultLauncher.java",
+            "lineNumber": 90,
+            "className": "org.junit.platform.launcher.core.DefaultLauncher",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "JUnit5TestReference.java",
+            "lineNumber": 89,
+            "className": "org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "TestExecution.java",
+            "lineNumber": 41,
+            "className": "org.eclipse.jdt.internal.junit.runner.TestExecution",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "runTests",
+            "fileName": "RemoteTestRunner.java",
+            "lineNumber": 541,
+            "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "runTests",
+            "fileName": "RemoteTestRunner.java",
+            "lineNumber": 763,
+            "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "run",
+            "fileName": "RemoteTestRunner.java",
+            "lineNumber": 463,
+            "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+            "nativeMethod": false
+          },
+          {
+            "methodName": "main",
+            "fileName": "RemoteTestRunner.java",
+            "lineNumber": 209,
+            "className": "org.eclipse.jdt.internal.junit.runner.RemoteTestRunner",
+            "nativeMethod": false
+          }
+        ],
+        "message": "Couldn't fetch the requested account information from gigya server.",
+        "localizedMessage": "Couldn't fetch the requested account information from gigya server."
+      }
+    }
+  },
+  "Timezone": 330,
+  "DeviceDeliveryCutoff": -1
+}
