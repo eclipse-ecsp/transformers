@@ -1,8 +1,8 @@
 [<img src="./images/logo.png" width="400" height="200"/>](./images/logo.png)
 
 # Transformers
-[![Build](https://github.com/HARMAN-Automotive/transformers/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/HARMAN-Automotive/transformers/actions/workflows/maven-publish.yml)
-[![License Compliance](https://github.com/Harman-Automotive/transformers/actions/workflows/license-compliance.yml/badge.svg)](https://github.com/Harman-Automotive/transformers/actions/workflows/license-compliance.yml)
+[![Build](https://github.com/eclipse-ecsp/transformers/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/eclipse-ecsp/transformers/actions/workflows/maven-publish.yml)
+[![License Compliance](https://github.com/eclipse-ecsp/transformers/actions/workflows/license-compliance.yml/badge.svg)](https://github.com/eclipse-ecsp/transformers/actions/workflows/license-compliance.yml)
 
 The `transformers` project provides serialization/deserialization support to the services. The following approaches are supported:
 
@@ -67,9 +67,9 @@ To run a method from within a test
 Add the following dependency in the target project
 ```
 <dependency>
-  <groupId>com.harman.ignite</groupId>
-  <artifactId>ignite-transformers</artifactId>
-  <version>3.X.X</version>
+  <groupId>com.eclipse.ecsp</groupId>
+  <artifactId>transformers</artifactId>
+  <version>1.X.X</version>
 </dependency>
 
 ```
@@ -132,7 +132,7 @@ VehicleId.inputvalidation=ALPHA_NUMERIC
 
 |                                                 Dependency                                                 | Purpose                                            |
 |:----------------------------------------------------------------------------------------------------------:|:---------------------------------------------------|
-|                           [Ignite Utils](https://github.com/HARMANInt/ics/utils)                           | Logging Support                                    |
+|                           [Ignite Utils](https://github.com/eclipse-ecsp/utils)                            | Logging Support                                    |
 |                      [Spring Framework](https://spring.io/projects/spring-framework)                       | For writing tests                                  |
 |                                     [Maven](https://maven.apache.org/)                                     | Dependency Management                              |
 |                                     [Junit](https://junit.org/junit5/)                                     | Testing framework                                  |
@@ -174,8 +174,8 @@ This project is licensed under the XXX License - see the [LICENSE.md](./LICENSE.
 
 ## Announcements
 
-All updates to this library are documented in our [Release Notes](./release_notes.txt) and [releases](https://github.com/HARMANInt/ics/transformers/releases).
-For the versions available, see the [tags on this repository](https://github.com/HARMANInt/ics/transformers/tags).
+All updates to this library are documented in our [Release Notes](./release_notes.txt) and [releases](https://github.com/eclipse-ecsp/transformers/releases).
+For the versions available, see the [tags on this repository](https://github.com/eclipse-ecsp/transformers/tags).
 
 [sonar]:https://ignitestoretool.ahanet.net/dashboard?id=com.harman.ignite%3Aignite-transformers
 [sonar img]:
@@ -186,7 +186,7 @@ For the versions available, see the [tags on this repository](https://github.com
 [license]: ./LICENSE.md
 [license img]: https://img.shields.io/badge/license-GNU%20LGPL%20v2.1-blue.svg
 
-[artifactory]: https://artifactory-fr.harman.com:443/artifactory/ignite-libs/com/harman/ignite/ignite-transformers/
+[artifactory]: https://github.com/orgs/eclipse-ecsp/packages/com/eclipse/ecsp/transformers/
 [artifactory img]: https://artifactory-fr.harman.com/ui/
 
 [status img]: https://jenkins-ignite.nh.ad.harman.com/buildStatus/icon?job=Ignite_Team%2FIgnite_Core%2FBuild_and_Deployment%2Ftransformers%2Fmaster
