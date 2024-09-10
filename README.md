@@ -4,7 +4,7 @@
 [![Build](https://github.com/eclipse-ecsp/transformers/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/eclipse-ecsp/transformers/actions/workflows/maven-publish.yml)
 [![License Compliance](https://github.com/eclipse-ecsp/transformers/actions/workflows/license-compliance.yml/badge.svg)](https://github.com/eclipse-ecsp/transformers/actions/workflows/license-compliance.yml)
 
-The `transformers` project provides serialization/deserialization support to the services. The following approaches are supported:
+The `transformers` project provides serialization and deserialization support to the services. The following approaches are supported:
 
 1. Serialization/Deserialization support for an `BlobEvent`.
 2. Use of [Fast Serialization](https://github.com/RuedigerMoeller/fast-serialization/tree/master) library to implement FST based serialization/deserialization for ingestion data
