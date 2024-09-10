@@ -120,15 +120,8 @@
 
     <repositories>
         <repository>
-            <id>githubUtils</id>
+            <id>github</id>
             <url>https://maven.pkg.github.com/eclipse-ecsp/utils</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>githubEntities</id>
-            <url>https://maven.pkg.github.com/eclipse-ecsp/entities</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
