@@ -72,23 +72,8 @@ public class IngestionSerializerFstImpl implements IngestionSerializer {
     /** The Constant DEVICE_AWARE_ENABLED. */
     private static final String DEVICE_AWARE_ENABLED = "device.aware.enabled";
     
-    /** The Constant STUB_ENTITIES_PREFIX. */
-    private static final String STUB_ENTITIES_PREFIX = "com.harman.ignite.entities.";
-    
-    /** The Constant REAL_ENTITIES_PREFIX. */
-    private static final String REAL_ENTITIES_PREFIX = "org.eclipse.ecsp.entities.";
-    
-    /** The Constant STUB_DOMAIN_PREFIX. */
-    private static final String STUB_DOMAIN_PREFIX = "com.harman.ignite.domain.";
-    
-    /** The Constant REAL_DOMAIN_PREFIX. */
-    private static final String REAL_DOMAIN_PREFIX = "org.eclipse.ecsp.domain.";
-    
     /** The Constant TWO. */
     public static final int TWO = 2;
-    
-    /** The Constant THREE. */
-    public static final int THREE = 3;
     
     /** The Constant SIXTEEN. */
     public static final int SIXTEEN = 16;
@@ -146,7 +131,6 @@ public class IngestionSerializerFstImpl implements IngestionSerializer {
             properties = new Properties();
             LOGGER.info("Loading properties from environment");
             System.getenv().forEach((k, v) -> properties.setProperty(k.replace("_", "."), v));
-            System.getProperties().forEach((k, v) -> properties.setProperty(k.toString(), v.toString()));
             LOGGER.info("device.aware.enabled:" + properties.get(DEVICE_AWARE_ENABLED));
         }
     }
@@ -177,7 +161,6 @@ public class IngestionSerializerFstImpl implements IngestionSerializer {
      * @param b the byte array
      * @return the IgniteBlobEvent object
      */
-    @SuppressWarnings("checkstyle:CyclomaticComplexity")
     @Override
     public IgniteBlobEvent deserialize(byte[] b) {
         try {
@@ -186,58 +169,8 @@ public class IngestionSerializerFstImpl implements IngestionSerializer {
             boolean deviceAwareEnableFlag = Boolean.parseBoolean((String) properties.get(DEVICE_AWARE_ENABLED));
             Object object = (Object) conf.getObjectInputCopyFrom(b, STREAM_MAGIC_BYTES_LEN, 
                     b.length - STREAM_MAGIC_BYTES_LEN).readObject();
+            return deviceAwareEnableFlag ? (IgniteDeviceAwareBlobEvent) object : (IgniteBlobEvent) object;
 
-            if (object instanceof org.eclipse.ecsp.entities.IgniteBlobEvent) {
-                return (IgniteBlobEvent) object;
-            } 
-            if (object instanceof org.eclipse.ecsp.entities.IgniteDeviceAwareBlobEvent) {
-                return (IgniteDeviceAwareBlobEvent) object;
-            } else if (object != null && object.getClass().getName().startsWith(STUB_ENTITIES_PREFIX)) {
-                // Map stub to real class and copy fields using reflection
-                org.eclipse.ecsp.entities.IgniteBlobEvent real;
-                if (deviceAwareEnableFlag) {
-                    real = new org.eclipse.ecsp.entities.IgniteDeviceAwareBlobEvent(null, null);
-                } else {
-                    real = new org.eclipse.ecsp.entities.IgniteBlobEvent();
-                }
-                try {
-                    java.lang.reflect.Method[] getters = object.getClass().getMethods();
-                    java.lang.reflect.Method[] setters = real.getClass().getMethods();
-                    for (java.lang.reflect.Method getter : getters) {
-                        String name = getter.getName();
-                        if ((name.startsWith("get") || name.startsWith("is")) 
-                                && getter.getParameterCount() == 0 
-                                && !getter.getReturnType().equals(void.class)) {
-                            Object value = getter.invoke(object);
-                            // Recursively map nested stubs for both .entities and .domain
-                            if (value != null) {
-                                String valueClassName = value.getClass().getName();
-                                if (valueClassName.startsWith(STUB_ENTITIES_PREFIX) 
-                                        || valueClassName.startsWith(STUB_DOMAIN_PREFIX)) {
-                                    value = deepMapToRealClass(value);
-                                }
-                            }
-                            String setterName = name.startsWith("is") 
-                                    ? "set" + name.substring(TWO) : "set" + name.substring(THREE);
-                            for (java.lang.reflect.Method setter : setters) {
-                                if (setter.getName().equals(setterName) && setter.getParameterCount() == 1) {
-                                    try {
-                                        setter.invoke(real, value);
-                                    } catch (Exception ignore) {
-                                        // Ignore any exception during setter invocation, continue with next field
-                                        LOGGER.debug("Failed to invoke setter: " + setterName + " for value: " + value);
-                                    }
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                } catch (Exception e) {
-                    LOGGER.error("Error mapping stub to real class during FST deserialization", e);
-                    throw e;
-                }
-                return real;
-            }
         } catch (Exception e) {
             FSTUtil.<RuntimeException>rethrow(e);
         }
@@ -255,67 +188,5 @@ public class IngestionSerializerFstImpl implements IngestionSerializer {
         // Convert to short from reading the first two bytes from byte array
         short sm = (short) (((bytes[0] & HEX_BASE_16) << EIGHT) + (bytes[1] & HEX_BASE_16));
         return sm == ObjectStreamConstants.STREAM_MAGIC;
-    }
-    
-    /**
-     * Utility method to deep map the stub object to its real class.
-     *
-     * @param stubObj the stub object
-     * @return the real class object
-     */
-    @SuppressWarnings("checkstyle:CyclomaticComplexity")
-    private Object deepMapToRealClass(Object stubObj) {
-        if (stubObj == null) {
-            return null;
-        }
-        Class<?> stubClass = stubObj.getClass();
-        String stubClassName = stubClass.getName();
-        String realClassName = null;
-        if (stubClassName.startsWith(STUB_ENTITIES_PREFIX)) {
-            realClassName = REAL_ENTITIES_PREFIX + stubClassName.substring(STUB_ENTITIES_PREFIX.length());
-        } else if (stubClassName.startsWith(STUB_DOMAIN_PREFIX)) {
-            realClassName = REAL_DOMAIN_PREFIX + stubClassName.substring(STUB_DOMAIN_PREFIX.length());
-        } else {
-            // Not a stub, return as is
-            return stubObj;
-        }
-        try {
-            Class<?> realClass = Class.forName(realClassName);
-            // Handle enum mapping
-            if (realClass.isEnum() && stubClass.isEnum()) {
-                return Enum.valueOf((Class<Enum>) realClass, ((Enum<?>) stubObj).name());
-            }
-            Object realObj = realClass.getDeclaredConstructor().newInstance();
-            java.lang.reflect.Method[] getters = stubClass.getMethods();
-            java.lang.reflect.Method[] setters = realClass.getMethods();
-            for (java.lang.reflect.Method getter : getters) {
-                String name = getter.getName();
-                if ((name.startsWith("get") || name.startsWith("is")) 
-                        && getter.getParameterCount() == 0 
-                        && !getter.getReturnType().equals(void.class)) {
-                    Object value = getter.invoke(stubObj);
-                    // Recursively map nested stubs for both .entities and .domain
-                    if (value != null) {
-                        String valueClassName = value.getClass().getName();
-                        if (valueClassName.startsWith(STUB_ENTITIES_PREFIX) 
-                                || valueClassName.startsWith(STUB_DOMAIN_PREFIX)) {
-                            value = deepMapToRealClass(value);
-                        }
-                    }
-                    String setterName = name.startsWith("is") 
-                            ? "set" + name.substring(TWO) : "set" + name.substring(THREE);
-                    for (java.lang.reflect.Method setter : setters) {
-                        if (setter.getName().equals(setterName) && setter.getParameterCount() == 1) {
-                            setter.invoke(realObj, value);
-                            break;
-                        }
-                    }
-                }
-            }
-            return realObj;
-        } catch (Exception e) {
-            LOGGER.error("Error mapping stub to real class during FST deserialization", e);
-        }
-        return null;
     }
 }
